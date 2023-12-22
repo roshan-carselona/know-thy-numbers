@@ -10,7 +10,7 @@ function UploadDataForm() {
 
   const [authenticated, setAuthenticated] = useState(true)
   const [formData, setFormData] = useState({
-    name: 'DESTINY',
+    name: 'Destiny',
     numerologyNumber: '',
     what_is_heading: '',
     what_is_description: '',
@@ -75,7 +75,7 @@ function UploadDataForm() {
     }
 
     setFormData({
-      name: 'DESTINY',
+      name: '',
       numerologyNumber: '',
       what_is_heading: '',
       what_is_description: '',
@@ -123,6 +123,7 @@ function UploadDataForm() {
                 className="w-full p-2 border border-gray-300 rounded"
                 value={formData.name}
                 onChange={handleChange}
+                // defaultValue={"Destiny"}
               >
                 {Object.values({
                   DESTINY: 'Destiny',
@@ -138,7 +139,7 @@ function UploadDataForm() {
                   PERSONALMONTH: 'Personal Month',
                   PERSONALDAY: 'Personal Day',
                   CORENUMBERCOMBO: 'Core Number Combo',
-              }).map(value => (
+              }).map((value) => (
                   <option key={value} value={value}>
                     {value}
                   </option>
